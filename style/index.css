@@ -1,0 +1,705 @@
+/* ====================公用css==================== */
+/* 定义自己的字体图标 首先声明自定义字体的名字 引入字体文件 指定字体文件的格式*/
+body {
+  font-family: "Microsoft YaHei", "sans-serif";
+  color: #333;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+@font-face {
+  font-family: "wjs";
+  src: url(../fonts/MiFie-Web-Font.eot) format("embedded-opentype"), url(../fonts/MiFie-Web-Font.svg) format("svg"), url(../fonts/MiFie-Web-Font.ttf) format("truetype"), url(../fonts/MiFie-Web-Font.woff) format("woff");
+}
+/* 将该字体图标变成自己的字体  与上面 @font-face 中的 font-family 属性相对应 */
+.wjs_icon {
+  font-family: wjs;
+}
+/* 通过伪类（::before）来定义一个字体图标 */
+/* 字体图标设计出来的时候一般都会有文档参考 */
+.wjs_icon_phone::before {
+  content: "\e908";
+}
+.wjs_icon_tel::before {
+  content: "\e909";
+}
+.wjs_icon_logo::before {
+  content: "\e920";
+}
+.wjs_icon_word::before {
+  content: "\e93e";
+}
+.wjs_icon_E903::before {
+  content: "\e903";
+}
+.wjs_icon_E906::before {
+  content: "\e906";
+}
+.wjs_icon_E905::before {
+  content: "\e905";
+}
+.wjs_icon_E907::before {
+  content: "\e907";
+}
+.wjs_icon_E901::before {
+  content: "\e901";
+}
+.wjs_icon_E900::before {
+  content: "\e900";
+}
+.wjs_icon_E904::before {
+  content: "\e904";
+}
+.wjs_icon_E902::before {
+  content: "\e902";
+}
+.wjs_icon_E906::before {
+  content: "\e906";
+}
+.wjs_icon_new01::before {
+  content: "\e90e";
+}
+.wjs_icon_new02::before {
+  content: "\e90f";
+}
+.wjs_icon_new03::before {
+  content: "\e910";
+}
+.wjs_icon_new04::before {
+  content: "\e911";
+}
+.wjs_icon_partner01::before {
+  content: "\e946";
+}
+.wjs_icon_partner02::before {
+  content: "\e92f";
+}
+.wjs_icon_partner03::before {
+  content: "\e92e";
+}
+.wjs_icon_partner04::before {
+  content: "\e92a";
+}
+.wjs_icon_partner05::before {
+  content: "\e929";
+}
+.wjs_icon_partner06::before {
+  content: "\e931";
+}
+.wjs_icon_partner07::before {
+  content: "\e92c";
+}
+.wjs_icon_partner08::before {
+  content: "\e92b";
+}
+.wjs_icon_partner09::before {
+  content: "\e92d";
+}
+.m_r10 {
+  margin-right: 10px;
+}
+.m_l10 {
+  margin-left: 10px;
+}
+.m_t10 {
+  margin-top: 10px;
+}
+.m_b10 {
+  margin-bottom: 10px;
+}
+/* ====================本页面css==================== */
+/* --------------------------------------------顶部通栏----------------------------------------------- */
+.wjs_header {
+  border-bottom: 1px solid #ccc;
+  color: #666;
+  font-size: 12px;
+  position: relative;
+  z-index: 32131321;
+}
+.wjs_header a {
+  color: #666;
+}
+.wjs_header .wjs_app {
+  color: #666;
+  position: relative;
+  display: block;
+}
+.wjs_header .wjs_app img {
+  display: none;
+}
+.wjs_header .wjs_app:hover img {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  margin-left: -60px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.wjs_header > .container > .row > div {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.wjs_header > .container > .row > div + div {
+  border-left: 1px solid #ccc;
+}
+.wjs_header .btn-register {
+  background-color: #E92322;
+  color: #fff;
+  padding: 3px 15px;
+}
+.wjs_header .btn-login {
+  padding: 3px 15px;
+  background-color: #517bf0;
+  color: #fff;
+}
+/* --------------------------------------------导航栏----------------------------------------------- */
+.wjs_nav {
+  background-color: #fff;
+  border-color: #e7e7e7;
+  border: none;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #ccc;
+  z-index: 1001101;
+  border-radius: 0;
+  width: 100%;
+  top: 0;
+}
+.wjs_nav .wjs_icon_logo {
+  font-size: 50px;
+  color: #E92322;
+  line-height: 50px;
+  vertical-align: middle;
+}
+.wjs_nav .wjs_icon_word {
+  font-size: 36px;
+  color: #333;
+  line-height: 50px;
+  vertical-align: middle;
+}
+.wjs_nav #bs-example-navbar-collapse-1 ul li a:hover {
+  border-bottom: 2px solid #E92322;
+}
+.wjs_nav .navbar-brand {
+  color: #777;
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_nav .navbar-brand:hover,
+.wjs_nav .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.wjs_nav .navbar-text {
+  color: #777;
+}
+.wjs_nav .navbar-nav > li > a {
+  color: #777;
+  height: 80px;
+  line-height: 50px;
+}
+.wjs_nav .navbar-nav > li > a:hover,
+.wjs_nav .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+}
+.wjs_nav .navbar-nav > .active > a,
+.wjs_nav .navbar-nav > .active > a:hover,
+.wjs_nav .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #fff;
+  border-bottom: 2px solid #E92322;
+}
+.wjs_nav .navbar-nav > .disabled > a,
+.wjs_nav .navbar-nav > .disabled > a:hover,
+.wjs_nav .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.wjs_nav .navbar-toggle {
+  border-color: #ddd;
+  margin-top: 23px;
+  margin-bottom: 23px;
+}
+.wjs_nav .navbar-toggle:hover,
+.wjs_nav .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.wjs_nav .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.wjs_nav .navbar-collapse,
+.wjs_nav .navbar-form {
+  border-color: #e7e7e7;
+}
+.wjs_nav .navbar-nav > .open > a,
+.wjs_nav .navbar-nav > .open > a:hover,
+.wjs_nav .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+.wjs_nav .navbar-link {
+  color: #777;
+}
+.wjs_nav .navbar-link:hover {
+  color: #333;
+}
+.wjs_nav .btn-link {
+  color: #777;
+}
+.wjs_nav .btn-link:hover,
+.wjs_nav .btn-link:focus {
+  color: #333;
+}
+.wjs_nav .btn-link[disabled]:hover,
+.wjs_nav .btn-link[disabled]:focus {
+  color: #ccc;
+}
+@media screen and (max-width: 768px) {
+  .wjs_nav .navbar-collapse {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+  }
+}
+@media (max-width: 767px) {
+  .wjs_nav .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .wjs_nav .navbar-nav .open .dropdown-menu > li > a:hover,
+  .wjs_nav .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .wjs_nav .navbar-nav .open .dropdown-menu > .active > a,
+  .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .wjs_nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a,
+  .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .wjs_nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+fieldset[disabled] .wjs_nav .btn-link:hover,
+fieldset[disabled] .wjs_nav .btn-link:focus {
+  color: #ccc;
+}
+/* -----------------------------------------------轮播图----------------------------------------------- */
+.wjs_banner .img_box {
+  display: block;
+  height: 410px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* 会保持图片的矢量比 */
+}
+.wjs_banner .img_mobile {
+  width: 100%;
+  display: block;
+}
+.wjs_banner .img_mobile img {
+  display: block;
+  width: 100%;
+}
+/* =============================信息模块============================= */
+.wjs_info {
+  padding: 50px 0;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_info .wjs_icon {
+  font-size: 30px;
+}
+.wjs_info .media {
+  display: block;
+  padding: 10px;
+}
+.wjs_info .media > .media-left {
+  padding-top: 2px;
+}
+.wjs_info .media:hover {
+  color: #E92322;
+}
+@media screen and (max-width: 992px) {
+  .wjs_info > .container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .wjs_info > .container {
+    width: 910px;
+  }
+}
+/* ===============================预约=============================== */
+/* bootstrap 中的公用浮动类名  pull-left 以及 pull-right */
+.wjs_book {
+  padding: 25px 0;
+  border-bottom: 1px solid #ccc;
+}
+.wjs_book .wjs_icon {
+  font-size: 24px;
+  vertical-align: middle;
+}
+.wjs_book .book_link {
+  color: #E92322;
+  border-bottom: 1px dashed #E92322;
+}
+.wjs_book .media_link:hover {
+  color: #E92322;
+}
+@media screen and (min-width: 992px) {
+  .wjs_book > .container {
+    width: 910px;
+  }
+}
+/* ===========================商品=================================== */
+.wjs_product {
+  padding: 30px 0;
+  background: #f5f5f5;
+}
+.wjs_product .nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.wjs_product .nav-tabs > li {
+  float: left;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+.wjs_product .nav-tabs > li > a {
+  margin-right: 0px;
+  line-height: 1.42857143;
+  border: none;
+  border-radius: 4px 4px 0 0;
+}
+.wjs_product .nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+  background: #f5f5f5;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active > a:hover,
+.wjs_product .nav-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #f5f5f5;
+  border: none;
+  border-bottom: 3px solid #E92322;
+}
+.wjs_product .nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.wjs_product .nav-tabs.nav-justified > li {
+  float: none;
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+  margin-right: 0;
+  border-radius: 4px;
+}
+.wjs_product .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+.wjs_product .nav-tabs.nav-justified > .active > a,
+.wjs_product .nav-tabs.nav-justified > .active > a:hover,
+.wjs_product .nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .wjs_product .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .wjs_product .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .wjs_product .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .wjs_product .nav-tabs.nav-justified > .active > a,
+  .wjs_product .nav-tabs.nav-justified > .active > a:hover,
+  .wjs_product .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+.wjs_product .wjs_product_tabsParent {
+  overflow: hidden;
+}
+.wjs_product .tab-content .tab-pane > div .product_box {
+  color: #666;
+  height: 150px;
+  display: block;
+  box-shadow: 2px 2px 3px #d8d8d8;
+  background-color: #fff;
+  margin-top: 30px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box.active {
+  background-color: #E92322;
+  position: relative;
+}
+.wjs_product .tab-content .tab-pane > div .product_box.active:before {
+  color: white;
+  content: "\e915";
+  font-family: wjs;
+  font-size: 33px;
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box.active .box_right {
+  border-left: 1px dashed #c12e2a;
+  color: white;
+}
+.wjs_product .tab-content .tab-pane > div .product_box.active .box_right p:nth-of-type(1) {
+  color: white;
+}
+.wjs_product .tab-content .tab-pane > div .product_box.active .box_left {
+  color: white;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_left {
+  overflow: hidden;
+  font-size: 12px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_left h3 {
+  font-size: 16px;
+  text-align: center;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_left p {
+  margin-bottom: 5px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_left div {
+  margin-top: 5px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_left .progress {
+  height: 14px;
+  margin: 5px 0;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_left .progress .progress-bar {
+  margin-top: 0;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right {
+  float: right;
+  width: 108px;
+  height: 150px;
+  text-align: center;
+  position: relative;
+  border-left: 1px dashed #c1c1c1;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right p:nth-of-type(1) {
+  margin-top: 25px;
+  color: #E92322;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right p:nth-of-type(1) b {
+  font-size: 44px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right p:nth-of-type(1) sub {
+  bottom: 0;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right .wjs_tip {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  margin-top: 10px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right .wjs_tip span {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  line-height: 12px;
+  border: 1px solid #333;
+  text-align: center;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right .wjs_tip span:nth-child(1) {
+  color: #E92322;
+  border-color: #E92322;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right .wjs_tip span:nth-child(2) {
+  color: green;
+  border-color: green;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right::before,
+.wjs_product .tab-content .tab-pane > div .product_box .box_right::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right::before {
+  box-shadow: 0 -2px 2px #d8d8d8 inset;
+  top: -6px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box .box_right::after {
+  box-shadow: 0 2px 2px  #d8d8d8 inset;
+  bottom: -6px;
+}
+.wjs_product .tab-content .tab-pane > div .product_box:hover {
+  color: #666;
+}
+@media screen and (max-width: 768px) {
+  .wjs_product .tab-content .tab-pane > .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* ==============================新闻宣传============================== */
+.wjs_news {
+  padding: 30px 0;
+}
+.wjs_news .wjs_news_title {
+  font-size: 20px;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+.wjs_news .wjs_news_title::after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  bottom: -3px;
+  right: -6px;
+}
+.wjs_news .wjs_news_tabs .wjs_icon {
+  color: white;
+  font-size: 30px;
+}
+.wjs_news .wjs_news_tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.wjs_news .wjs_news_tabs > li > a {
+  text-align: center;
+  background-color: #ccc;
+  line-height: 60px;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  display: block;
+  padding: 0;
+  margin-bottom: 60px;
+}
+.wjs_news .wjs_news_tabs > li > a:hover {
+  border: none;
+  background-color: #E92322;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  display: block;
+}
+.wjs_news .wjs_news_tabs > li:last-child > a {
+  margin-bottom: 0;
+}
+.wjs_news .wjs_news_tabs > li.active > a,
+.wjs_news .wjs_news_tabs > li.active > a:hover,
+.wjs_news .wjs_news_tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #E92322;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  display: block;
+}
+.wjs_news .wjs_news_tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.wjs_news .wjs_news_tabs.nav-justified > li {
+  float: none;
+}
+.wjs_news .wjs_news_tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+  margin-right: 0;
+  border-radius: 4px;
+}
+.wjs_news .wjs_news_tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+.wjs_news .wjs_news_tabs.nav-justified.active > a,
+.wjs_news .wjs_news_tabs.nav-justified.active > a:hover,
+.wjs_news .wjs_news_tabs.nav-justified.active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .wjs_news .wjs_news_tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .wjs_news .wjs_news_tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) {
+  .wjs_news .wjs_news_tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .wjs_news .wjs_news_tabs.nav-justified > .active > a,
+  .wjs_news .wjs_news_tabs.nav-justified > .active > a:hover,
+  .wjs_news .wjs_news_tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+.wjs_news .wjs_news_line {
+  height: 100%;
+  position: absolute;
+  left: 45px;
+  top: 0;
+  border-left: 1px dashed #E92322;
+}
+.wjs_news .tab-content ul {
+  list-style: none;
+}
+.wjs_news .tab-content ul li {
+  padding: 15px;
+}
+.wjs_news .tab-content ul li a:hover {
+  color: #E92322;
+  border-bottom: 1px dotted #E92322;
+}
+/* ===================================底部=================================== */
+.wjs_footer {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+}
+.wjs_footer ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 90px;
+}
+.wjs_footer ul li {
+  display: inline-block;
+}
+.wjs_footer ul li a {
+  line-height: 50px;
+}
+/* ============================底部空白============================= */
+.ajsdabd {
+  height: 200px;
+  background-color: pink;
+}
